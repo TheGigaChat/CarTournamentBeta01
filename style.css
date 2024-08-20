@@ -1,0 +1,421 @@
+/* reset */
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+html {
+  background-color: #303030;
+  /* overflow: hidden; */
+}
+
+button {
+  font: inherit;
+}
+
+/* auxiliary */
+/* auxiliary */
+
+.screenOff {
+  position: absolute;
+  left: -10000px;
+}
+
+.blocked {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.new {
+  background-color: lightgreen;
+  animation: blicking 3s ease-in-out 0s infinite;
+}
+
+.newHeader {
+  color: rgb(0, 212, 0);
+}
+
+.alertHeader {
+  color: rgb(204, 8, 8);
+}
+
+.alert {
+  background-color: lightcoral;
+  animation: blicking 3s ease-in-out 0s infinite;
+}
+
+@keyframes blicking {
+  0% {
+    scale: 0.96;
+  }
+  50% {
+    filter: brightness(1.1);
+    scale: 1;
+  }
+  100% {
+    scale: 0.96;
+  }
+}
+
+.temporaryAlert {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  font-size: 5rem;
+  color: red;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.555);
+  z-index: 1;
+  animation: screenOff 2s linear 0s forwards;
+}
+
+@keyframes screenOff {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+}
+
+/* header */
+/* header */
+
+.header {
+  background-color: rgb(222, 224, 228);
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header div {
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: default;
+}
+
+/* index nav */
+/* index nav */
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.generalLink {
+  font-size: 3rem;
+  font-weight: 800;
+  padding: 1rem;
+  filter: brightness(0.85);
+}
+
+.generalLink:hover {
+  filter: brightness(1);
+}
+
+.tournamentLink span {
+  font-size: 1.5rem;
+}
+
+.nav {
+  min-width: 100%;
+  min-height: 80vh;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section div a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  height: 250px;
+  border: 1px solid rgb(225, 233, 240);
+  color: rgb(54, 54, 54);
+  background-color: rgb(225, 233, 240);
+  cursor: pointer;
+}
+
+/* main */
+/* main */
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-family: monospace;
+}
+
+.shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop section {
+  flex-wrap: wrap;
+}
+
+.newItems,
+.shopItems {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.label {
+  background-color: aliceblue;
+  padding: 1rem;
+  font-size: 3rem;
+  margin: 1rem;
+  align-self: flex-start;
+}
+
+.title {
+  background-color: rgb(222, 230, 238);
+  padding: 1rem;
+  font-size: 4rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.item,
+.patternItem,
+.pattern {
+  min-width: 300px;
+  height: 300px;
+  background-color: aliceblue;
+  font-size: 2rem;
+  font-family: monospace;
+  padding: 1rem;
+  margin: 1rem;
+  white-space: pre-line;
+
+  filter: brightness(0.85);
+}
+
+.item::first-line {
+  font-weight: 900;
+}
+
+.item:hover {
+  filter: brightness(1);
+  cursor: pointer;
+}
+
+.buttonsSection {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navButton {
+  font-size: 3rem;
+  padding: 1rem;
+  font-weight: 700;
+  color: #303030;
+  background-color: aliceblue;
+  filter: brightness(0.8);
+  margin: 1rem;
+}
+
+.navButton:hover {
+  filter: brightness(1);
+}
+
+/* work */
+/* work */
+
+.work {
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.work h2 {
+  font-size: 4rem;
+  color: aliceblue;
+  margin-bottom: 2rem;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices div {
+  min-width: 300px;
+  height: 300px;
+  background-color: transparent;
+  border: 5px solid aliceblue;
+  font-weight: 900;
+  cursor: pointer;
+  color: aliceblue;
+  font-size: 3rem;
+  font-family: monospace;
+  padding: 1rem;
+  margin: 3rem;
+  white-space: pre-line;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices div:hover {
+  background-color: aliceblue;
+  color: #303030;
+}
+
+/* garage */
+/* garage */
+
+.garage {
+  display: flex;
+  flex-direction: column;
+}
+.garage div:hover {
+  filter: brightness(1);
+  cursor: pointer;
+}
+
+.createCar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.createCar section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.createCar section div:hover {
+  filter: brightness(0.85);
+  cursor: default;
+}
+
+.pattern,
+.patternItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+.yourCarItems {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.yourCarItems div:hover {
+  cursor: grab;
+}
+
+.container:not(.yourCarItems) {
+  background-color: #818181;
+  color: rgb(43, 43, 43);
+  border: 4px solid rgb(209, 209, 209);
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.draggble {
+  min-width: 300px;
+  height: 300px;
+  background-color: aliceblue;
+  color: black;
+  font-size: 2rem;
+  font-family: monospace;
+  padding: 1rem;
+  margin: 1rem;
+  white-space: pre-line;
+  font-weight: 400;
+
+  filter: brightness(0.85);
+}
+
+#test {
+  position: absolute;
+  z-index: 2;
+  color: red;
+  top: 650px;
+  left: 650px;
+  font-size: 3rem;
+}
+
+.garage__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score {
+  background-color: aliceblue;
+  padding: 1rem;
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+/* tournament */
+/* tournament */
+
+.tournament {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tournamentTime {
+  color: lightcoral;
+  text-wrap: nowrap;
+  margin: 1rem;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.tournamentList {
+  background-color: aliceblue;
+  min-width: 80%;
+  min-height: 80%;
+  font-size: 4rem;
+}
+
+.tournamentList p {
+  margin: 2rem;
+}
+
+.yourPlace {
+  color: white;
+  background-color: darkgoldenrod;
+  padding: 0.5rem;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="garage.js" defer></script>
+    <title>Car Tournament</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="yourLevel"><span>Your Level: </span>1</div>
+      <div class="season"><span>Season: </span>Summer</div>
+      <div class="yourMoney"><span>Money: </span>1000$</div>
+    </header>
+    <main>
+      <section class="garage">
+        <section class="garage__header">
+          <h2 class="label">Your Garage</h2>
+          <h2 class="score screenOff">Your Score:</h2>
+        </section>
+        <section class="createCar">
+          <div class="pattern">Standard Car</div>
+          <section class="standardCarPattern patternSection screenOff">
+            <div class="patternItem container">
+              <p>Motor(standard)</p>
+            </div>
+            <div class="patternItem container"><p>Carcass(car)</p></div>
+            <div class="patternItem container"><p>Wheels 1(season)</p></div>
+            <div class="patternItem container"><p>Wheels 2(season)</p></div>
+            <div class="patternItem container"><p>Oil filter</p></div>
+          </section>
+          <div class="pattern">Standard Motorcycle</div>
+          <section class="standardMotorcyclePattern patternSection screenOff">
+            <div class="patternItem container">
+              <p>Motor(standard, small)</p>
+            </div>
+            <div class="patternItem container"><p>Carcass(motorcycle)</p></div>
+            <div class="patternItem container"><p>Wheels 1(season)</p></div>
+            <div class="patternItem container"><p>Oil filter</p></div>
+          </section>
+          <div class="pattern">Electro Car</div>
+          <section class="electroCarPattern patternSection screenOff">
+            <div class="patternItem container"><p>Motor(electro)</p></div>
+            <div class="patternItem container"><p>Carcass(car)</p></div>
+            <div class="patternItem container"><p>Wheels 1(season)</p></div>
+            <div class="patternItem container"><p>Wheels 2(season)</p></div>
+            <div class="patternItem container"><p>Accumulator</p></div>
+          </section>
+          <div class="pattern">Electro Motorcycle</div>
+          <section class="electroMotorcyclePattern patternSection screenOff">
+            <div class="patternItem container">
+              <p>Motor(electro, small)</p>
+            </div>
+            <div class="patternItem container"><p>Carcass(motorcycle)</p></div>
+            <div class="patternItem container"><p>Wheels 1(season)</p></div>
+            <div class="patternItem container"><p>Accumulator</p></div>
+          </section>
+        </section>
+        <h2 class="label">Your Items</h2>
+        <section class="yourCarItems container">
+          <div class="patternItem screenOff" id="parent">motor</div>
+        </section>
+        <section class="buttonsSection">
+          <button class="navButton back screenOff">Back</button>
+          <button class="navButton"><a href="\">Close</a></button>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
